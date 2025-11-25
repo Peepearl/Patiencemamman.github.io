@@ -1,0 +1,44 @@
+:root{
+  --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#6c7cff;
+  --maxw:1100px;
+  font-family: 'Inter', sans-serif;
+}
+body{margin:0;background:var(--bg);color:#e6eef7;line-height:1.5}
+.container{max-width:var(--maxw);margin:0 auto;padding:40px 20px}
+header{padding:18px 0;border-bottom:1px solid rgba(255,255,255,0.03)}
+.header-inner{display:flex;justify-content:space-between;align-items:center}
+.brand .name a{color:var(--accent);text-decoration:none;font-size:20px}
+.role{color:var(--muted);font-size:13px;margin-top:4px}
+.social a{color:var(--muted);margin-left:12px;text-decoration:none;font-size:14px}
+
+.hero{display:flex;gap:24px;align-items:center;padding:40px 0}
+.hero-left{flex:1}
+.hero-right{width:160px;height:160px}
+.profile-img{width:100%;height:100%;border-radius:8px;object-fit:cover;border:3px solid rgba(255,255,255,0.06)}
+
+h2{font-size:28px;margin:6px 0}
+.lead{color:var(--muted)}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:8px 14px;border-radius:8px;text-decoration:none;margin-right:8px}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06)}
+
+.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:18px}
+.skills h4, .resume h4{margin-top:0}
+.skill{margin-bottom:12px}
+.skill span{display:block;color:var(--muted);font-size:14px;margin-bottom:6px}
+.bar{background:rgba(255,255,255,0.04);height:10px;border-radius:6px;overflow:hidden}
+.fill{height:100%;background:linear-gradient(90deg,var(--accent),#5bbcff)}
+
+.resume-item, .project, .testimonial{background:rgba(255,255,255,0.02);padding:12px;border-radius:8px;margin-bottom:12px}
+.project h4 a{color:var(--accent);text-decoration:none}
+
+.services ul{display:flex;gap:12px;list-style:none;padding:0;margin:0}
+.services li{background:rgba(255,255,255,0.02);padding:10px 12px;border-radius:8px}
+
+.site-footer{border-top:1px solid rgba(255,255,255,0.03);padding:14px 0;text-align:center;color:var(--muted);font-size:14px}
+
+/* Responsive */
+@media (max-width:880px){
+  .hero{flex-direction:column-reverse}
+  .skills-grid{grid-template-columns:1fr}
+  .hero-right{width:120px;height:120px}
+}
