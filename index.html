@@ -5,16 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mamman Patience – Portfolio</title>
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   
   <!-- SIDEBAR -->
-  <aside class="sidebar">
-    <div class="sidebar-content">
-      <!-- SOCIAL LINKS AT TOP -->
-      <div class="sidebar-social">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <h1 class="logo">Mamman Patience</h1>
+      <button class="close-btn" id="closeBtn">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <nav class="nav-menu">
+      <a href="#home" class="nav-item active">Home</a>
+      <a href="#about" class="nav-item">About</a>
+      <a href="#resume" class="nav-item">Resume</a>
+      <a href="#portfolio" class="nav-item">Portfolio</a>
+      <a href="#services" class="nav-item">Services</a>
+      <a href="#contact" class="nav-item">Contact</a>
+    </nav>
+  </aside>
+
+  <!-- MOBILE TOGGLE -->
+  <button class="menu-toggle" id="menuToggle">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    
+    <!-- HOME SECTION -->
+    <section id="home" class="section home-section">
+      <div class="home-container">
+        <div class="home-content">
+          <div class="home-text">
+            <p class="greeting">Hi, I'm</p>
+            <h1 class="name-title">Mamman Patience</h1>
+            <div class="typing-wrapper">
+              <span class="typed-text"></span>
+              <span class="cursor">|</span>
+            </div>
+          </div>
+          <div class="home-image">
+            <img src="assets/profile.jpg" alt="Mamman Patience">
+          </div>
+        </div>
         <div class="social-links">
           <a href="https://github.com/Peepearl" target="_blank" title="GitHub">
             <i class="fab fa-github"></i>
@@ -27,291 +65,306 @@
           </a>
         </div>
       </div>
-
-      <div class="profile-section">
-        <img src="asset/profile.jpg" alt="Mamman Patience" class="sidebar-img">
-        <h2 class="sidebar-name">Mamman Patience</h2>
-        <p class="sidebar-role">Data Analyst & ML Enthusiast</p>
-      </div>
-
-      <nav class="sidebar-nav">
-        <a href="#home" class="nav-link active">
-          <i class="fas fa-home"></i>
-          <span>Home</span>
-        </a>
-        <a href="#about" class="nav-link">
-          <i class="fas fa-user"></i>
-          <span>About</span>
-        </a>
-        <a href="#services" class="nav-link">
-          <i class="fas fa-briefcase"></i>
-          <span>Services</span>
-        </a>
-        <a href="#projects" class="nav-link">
-          <i class="fas fa-code"></i>
-          <span>Projects</span>
-        </a>
-        <a href="#resume.pdf" class="nav-link">
-          <i class="fas fa-file-alt"></i>
-          <span>Resume</span>
-        </a>
-        <a href="#contact" class="nav-link">
-          <i class="fas fa-envelope"></i>
-          <span>Contact</span>
-        </a>
-      </nav>
-
-      <div class="sidebar-footer">
-        <p class="copyright">&copy; <span id="year"></span> Mamman Patience</p>
-      </div>
-    </div>
-  </aside>
-
-  <!-- MAIN CONTENT -->
-  <main class="main-content">
-    
-    <!-- HOME SECTION -->
-    <section id="home" class="section home-section">
-      <div class="container">
-        <div class="home-grid">
-          <div class="home-text">
-            <h1 class="typing-container">
-              <span id="typedText"></span>
-              <span class="cursor">|</span>
-            </h1>
-            <h2 class="hero-subtitle">Data Analyst • Data Scientist • Machine Learning Enthusiast</h2>
-            <p class="hero-text">I build data-driven solutions and AI applications to solve real-world problems.</p>
-            <div class="hero-buttons">
-              <a href="#contact" class="btn btn-primary">Get in Touch</a>
-              <a href="asset/resume.pdf" class="btn btn-outline" download>Download CV</a>
-            </div>
-          </div>
-          <div class="home-image">
-            <div class="image-wrapper">
-              <img src="asset/profile.jpg" alt="Mamman Patience" class="home-profile-img">
-              <div class="image-border"></div>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
 
     <!-- ABOUT SECTION -->
     <section id="about" class="section">
       <div class="container">
-        <h2 class="section-title">About Me</h2>
-        <div class="section-divider"></div>
-        
-        <p class="about-text">
-          Enthusiastic and results-driven Data Scientist with practical experience in data analysis, machine learning, and building AI-driven solutions. Skilled in Python, SQL, data preprocessing, model development, and deploying applications using tools like Streamlit.
-        </p>
-        <p class="about-text">
-          I have developed end-to-end projects including crop disease detection, resume intelligence systems, customer support chatbots, and predictive analytics models. I enjoy solving real-world problems with data, creating intuitive solutions, and continuously expanding my expertise in AI, deep learning, and intelligent automation.
+        <h2 class="section-title">About</h2>
+        <p class="about-description">
+          AI/ML Engineer and Data Analyst with hands-on experience in developing and deploying machine learning, data collection, analysis, data transformation and building AI-driven solutions. Proficient in Python, TensorFlow, scikit-learn, Pandas, SQL, Excel and Power BI, with experience in predictive modeling, computer vision, and data-driven decision support. Passionate about leveraging AI to solve complex problems, optimize processes, and deliver actionable insights across diverse sectors.
         </p>
 
-        <div class="skills-section">
-          <h3 class="subsection-title">My Skills</h3>
-          <div class="skills-grid">
-            <div class="skill-item">
-              <div class="skill-header">
-                <span class="skill-name">Python</span>
-                <span class="skill-percent">85%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 85%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-header">
-                <span class="skill-name">SQL</span>
-                <span class="skill-percent">80%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 80%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-header">
-                <span class="skill-name">Machine Learning</span>
-                <span class="skill-percent">75%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 75%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-header">
-                <span class="skill-name">Data Visualization</span>
-                <span class="skill-percent">80%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 80%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-header">
-                <span class="skill-name">Streamlit</span>
-                <span class="skill-percent">70%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 70%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-header">
-                <span class="skill-name">Deep Learning</span>
-                <span class="skill-percent">65%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 65%"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVICES SECTION -->
-    <section id="services" class="section section-alt">
-      <div class="container">
-        <h2 class="section-title">Services</h2>
-        <div class="section-divider"></div>
-        
-        <div class="services-grid">
-          <div class="service-card">
-            <div class="service-icon">
-              <i class="fas fa-chart-line"></i>
-            </div>
-            <h3>Data Analysis & Reporting</h3>
-            <p>Transform raw data into actionable insights through comprehensive analysis and visualization.</p>
-          </div>
-          <div class="service-card">
-            <div class="service-icon">
+        <div class="about-grid">
+          <div class="about-card">
+            <div class="card-icon">
               <i class="fas fa-brain"></i>
             </div>
-            <h3>Machine Learning Models</h3>
-            <p>Build and deploy predictive models to solve complex business problems.</p>
-          </div>
-          <div class="service-card">
-            <div class="service-icon">
-              <i class="fas fa-chart-bar"></i>
+            <h3>ML/AI Engineer & Data Analyst</h3>
+            <p>I build intelligent systems and turn data into decisions </p>
+            
+            <div class="details-list">
+              <p><strong>Degree:</strong> BSc. in Microbiology</p>
+              <p><strong>ML & AI:</strong> Python (Scikit-Learn, TensorFlow), Classification, Regression, Computer Vision, NLP Basics</p>
+              <p><strong>Data & Analytics:</strong> SQL (MySQL, PostgreSQL), Data Wrangling, Visualization (Power BI, Tableau, Plotly), Predictive Modeling</p>
+              <p><strong>Deployment & Tools:</strong> Git, GitHub, Streamlit, Streamlit Cloud</p>
+              <p><strong>Soft Skills:</strong> Problem-Solving, Critical Thinking, Collaboration</p>
             </div>
-            <h3>Dashboard & Visualization</h3>
-            <p>Create interactive dashboards and stunning visualizations for data-driven decision making.</p>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- PROJECTS SECTION -->
-    <section id="projects" class="section">
-      <div class="container">
-        <h2 class="section-title">Projects</h2>
-        <div class="section-divider"></div>
-        
-        <div class="projects-grid">
-          <div class="project-card">
-            <div class="project-header">
-              <i class="fas fa-leaf project-icon"></i>
+        <div class="skills-section">
+          <h3 class="subsection-title">Skills</h3>
+          <p class="subsection-subtitle">My Specialties</p>
+          
+          <div class="skills-container">
+            <div class="skill-box">
+              <div class="skill-info">
+                <span>Python</span>
+                <span>85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="85%"></div>
+              </div>
             </div>
-            <h3>Crop Disease Detection</h3>
-            <p>A Convolutional Neural Network (CNN) model that classifies crop leaf images and detects diseases early. Deployed with Streamlit for easy use.</p>
-            <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">CNN</span>
-              <span class="tag">Streamlit</span>
-            </div>
-            <a href="https://github.com/Peepearl/plant_disease_detector_model.git" target="_blank" class="project-link">
-              View Project <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
 
-          <div class="project-card">
-            <div class="project-header">
-              <i class="fas fa-shield-alt project-icon"></i>
+            <div class="skill-box">
+              <div class="skill-info">
+                <span>SQL</span>
+                <span>60%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="60%"></div>
+              </div>
             </div>
-            <h3>URL Phishing Detection</h3>
-            <p>A machine learning model that analyzes URL patterns to classify websites as safe or malicious. Includes feature engineering and model evaluation.</p>
-            <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">ML</span>
-              <span class="tag">Security</span>
-            </div>
-            <a href="https://github.com/Peepearl/URL_Detector.git" target="_blank" class="project-link">
-              View Project <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
 
-          <div class="project-card">
-            <div class="project-header">
-              <i class="fas fa-heartbeat project-icon"></i>
+            <div class="skill-box">
+              <div class="skill-info">
+                <span>Machine Learning</span>
+                <span>65%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="65%"></div>
+              </div>
             </div>
-            <h3>Heart Disease Risk Prediction</h3>
-            <p>A predictive model that analyzes medical features to estimate the likelihood of heart disease using Logistic Regression and Random Forest.</p>
-            <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">ML</span>
-              <span class="tag">Healthcare</span>
-            </div>
-            <a href="https://github.com/Peepearl/Heart_Disease_Detector.git" target="_blank" class="project-link">
-              View Project <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
 
-          <div class="project-card">
-            <div class="project-header">
-              <i class="fas fa-users project-icon"></i>
+            <div class="skill-box">
+              <div class="skill-info">
+                <span>Data Visualization (Power BI)</span>
+                <span>70%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="70%"></div>
+              </div>
             </div>
-            <h3>Customer Churn Analysis</h3>
-            <p>A detailed data analysis project examining why customers stop patronizing the organization. Includes data cleaning, exploratory data analysis, and insights.</p>
-            <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">EDA</span>
-              <span class="tag">Business</span>
+
+            <div class="skill-box">
+              <div class="skill-info">
+                <span>TensorFlow & Scikit-learn</span>
+                <span>65%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="65%"></div>
+              </div>
             </div>
-            <a href="https://github.com/Peepearl/customer_churn_analysis.git" target="_blank" class="project-link">
-              View Project <i class="fas fa-arrow-right"></i>
-            </a>
+
+            <div class="skill-box">
+              <div class="skill-info">
+                <span>Data Wrangling & Analysis</span>
+                <span>85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="85%"></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- RESUME SECTION -->
-    <section id="resume" class="section section-alt">
+    <section id="resume" class="section section-gray">
       <div class="container">
         <h2 class="section-title">Resume</h2>
-        <div class="section-divider"></div>
-        
-        <div class="resume-grid">
+        <p class="section-subtitle">My qualifications</p>
+
+        <div class="resume-container">
           <div class="resume-column">
-            <h3 class="resume-heading"><i class="fas fa-graduation-cap"></i> Education</h3>
-            <div class="resume-item">
-              <h4>BSc Microbiology</h4>
-              <p class="resume-institution">Kwara State University</p>
-              <p class="resume-date">2015 - 2019</p>
+            <div class="resume-box summary-box">
+              <h3><i class="fas fa-user"></i> Summary</h3>
+              <h4>Professional Summary</h4>
+              <p>AI/ML Engineer and Data Analyst with hands-on experience in developing and deploying machine learning, data collection, analysis, data transformation and building AI-driven solutions. Proficient in Python, TensorFlow, scikit-learn, Pandas, SQL, Excel and Power BI, with experience in predictive modeling, computer vision, and data-driven decision support. Passionate about leveraging AI to solve complex problems, optimize processes, and deliver actionable insights across diverse sectors.</p>
+            </div>
+
+            <div class="resume-box">
+              <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+              
+              <div class="timeline-item">
+                <div class="timeline-year">2017-2021</div>
+                <div class="timeline-content">
+                  <h4>BSc. in Microbiology</h4>
+                  <p>Kwara State University, Malete, Kwara State</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="resume-box">
+              <h3><i class="fas fa-certificate"></i> Core Skills</h3>
+              <ul class="skills-list">
+                <li><strong>ML & AI:</strong> Python (Scikit-Learn, TensorFlow), Classification, Regression, Computer Vision, NLP Basics</li>
+                <li><strong>Data & Analytics:</strong> SQL (MySQL, PostgreSQL), Data Wrangling, Visualization (Power BI, Tableau, Plotly), Predictive Modeling</li>
+                <li><strong>Deployment & Tools:</strong> Git, GitHub, Streamlit, Streamlit Cloud</li>
+                <li><strong>Soft Skills:</strong> Problem-Solving, Critical Thinking, Collaboration</li>
+              </ul>
             </div>
           </div>
 
           <div class="resume-column">
-            <h3 class="resume-heading"><i class="fas fa-briefcase"></i> Experience</h3>
-            <div class="resume-item">
-              <h4>Data Analyst </h4>
-              <p class="resume-institution">Company Name</p>
-              <p class="resume-date">2023 - 2024</p>
-              <ul class="resume-list">
-                <li>Analyzed sales and customer data to optimize business decisions</li>
-                <li>Built dashboards and visualizations using Python and Tableau</li>
-                <li>Collaborated with cross-functional teams to deliver insights</li>
-              </ul>
+            <div class="resume-box">
+              <h3><i class="fas fa-briefcase"></i> Professional Experience</h3>
+              
+              <div class="timeline-item">
+                <div class="timeline-year">Mar 2025 - Sep 2025</div>
+                <div class="timeline-content">
+                  <h4>ML/AI Engineer</h4>
+                  <p><strong>Webfala Initiative for All</strong></p>
+                  <ul>
+                    <li>Built and deployed a Crop Disease Detection System and a Loan Prediction Model using Python, TensorFlow, scikit-learn, Pandas, and NumPy</li>
+                    <li>Collaborated on data preprocessing, feature engineering, model training, and evaluation, contributing to real-world AI solutions</li>
+                    <li>Crop Disease Detector achieved >90% accuracy across 7 plant classes, delivering actionable insights to farmers</li>
+                    <li>Loan Prediction Model reached ~85% prediction accuracy, supporting effective financial risk assessment and decision-making</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-year">Mar 2024 - Oct 2024</div>
+                <div class="timeline-content">
+                  <h4>Data Analyst</h4>
+                  <p><strong>Thels Impact Consulting (Remote)</strong></p>
+                  <ul>
+                    <li>Automated tuition reporting for 50+ universities, cutting manual research by 30%</li>
+                    <li>Analyzed academic/financial data and delivered real-time insights via dashboards</li>
+                    <li>Presented findings to stakeholders, supporting strategic decision-making</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-year">Jul 2024 - Aug 2024</div>
+                <div class="timeline-content">
+                  <h4>Data Analyst Intern</h4>
+                  <p><strong>Only Quality Data (Remote)</strong></p>
+                  <ul>
+                    <li>Built customer churn prediction models and dashboards using SQL, Python, and Power BI</li>
+                    <li>Delivered 3 end-to-end analytics projects (data wrangling, visualization)</li>
+                    <li>Guided retention strategy through churn risk insights</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
         <div class="resume-download">
-          <a href="asset/resume.pdf" class="btn btn-primary" download>
-            <i class="fas fa-download"></i> Download Full Resume
+          <a href="assets/resume.pdf" class="btn-download" download>
+            <i class="fas fa-download"></i> Download Resume
           </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section id="portfolio" class="section">
+      <div class="container">
+        <h2 class="section-title">Portfolio</h2>
+        <p class="section-subtitle">My Recent Work</p>
+
+        <div class="portfolio-grid">
+          <div class="portfolio-card">
+            <div class="portfolio-icon">
+              <i class="fas fa-leaf"></i>
+            </div>
+            <h3>Crop Disease Detection</h3>
+            <p>CNN-based computer vision model for real-time plant disease detection achieving >90% accuracy across 7 plant classes.</p>
+            <div class="portfolio-tags">
+              <span>Python</span>
+              <span>TensorFlow</span>
+              <span>CNN</span>
+              <span>Streamlit</span>
+            </div>
+            <a href="https://github.com/Peepearl/plant_disease_detector_model.git" target="_blank" class="portfolio-link">View Project →</a>
+          </div>
+
+          <div class="portfolio-card">
+            <div class="portfolio-icon">
+              <i class="fas fa-hand-holding-usd"></i>
+            </div>
+            <h3>Loan Prediction Model</h3>
+            <p>Machine learning system for financial risk assessment reaching ~85% prediction accuracy, supporting effective decision-making.</p>
+            <div class="portfolio-tags">
+              <span>Python</span>
+              <span>Scikit-learn</span>
+              <span>ML</span>
+            </div>
+            <a href="#" target="_blank" class="portfolio-link">View Project →</a>
+          </div>
+
+          <div class="portfolio-card">
+            <div class="portfolio-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>URL Phishing Detection</h3>
+            <p>Machine learning model that analyzes URL patterns to classify websites as safe or malicious with 80% accuracy.</p>
+            <div class="portfolio-tags">
+              <span>Python</span>
+              <span>ML</span>
+              <span>Security</span>
+            </div>
+            <a href="https://github.com/Peepearl/URL_Detector.git" target="_blank" class="portfolio-link">View Project →</a>
+          </div>
+
+          <div class="portfolio-card">
+            <div class="portfolio-icon">
+              <i class="fas fa-heartbeat"></i>
+            </div>
+            <h3>Heart Disease Prediction</h3>
+            <p>Predictive model analyzing medical features to estimate heart disease likelihood using Logistic Regression and Random Forest.</p>
+            <div class="portfolio-tags">
+              <span>Python</span>
+              <span>ML</span>
+              <span>Healthcare</span>
+            </div>
+            <a href="https://github.com/Peepearl/Heart_Disease_Detector.git" target="_blank" class="portfolio-link">View Project →</a>
+          </div>
+
+          <div class="portfolio-card">
+            <div class="portfolio-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3>Customer Churn Analysis</h3>
+            <p>Data analysis examining customer behavior patterns and key churn drivers with actionable retention insights.</p>
+            <div class="portfolio-tags">
+              <span>Python</span>
+              <span>SQL</span>
+              <span>Power BI</span>
+            </div>
+            <a href="https://github.com/Peepearl/customer_churn_analysis.git" target="_blank" class="portfolio-link">View Project →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="section section-gray">
+      <div class="container">
+        <h2 class="section-title">Services</h2>
+        <p class="section-subtitle">Passionate about AI/ML and Data Science, applying expertise in developing innovative solutions.</p>
+
+        <div class="services-grid">
+          <div class="service-item">
+            <div class="service-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3>Data Analysis</h3>
+            <p>Transform raw data into actionable insights through comprehensive analysis, visualization, and reporting using Power BI, Tableau, and Python.</p>
+          </div>
+
+          <div class="service-item">
+            <div class="service-icon">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h3>Machine Learning</h3>
+            <p>Build and deploy predictive models, computer vision systems, and AI solutions to solve complex business problems.</p>
+          </div>
+
+          <div class="service-item">
+            <div class="service-icon">
+              <i class="fas fa-database"></i>
+            </div>
+            <h3>Data Wrangling</h3>
+            <p>Clean, transform, and prepare data for analysis using SQL, Pandas, and advanced data preprocessing techniques.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -319,38 +372,32 @@
     <!-- CONTACT SECTION -->
     <section id="contact" class="section">
       <div class="container">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="section-divider"></div>
-        
+        <h2 class="section-title">Contact</h2>
+        <p class="section-subtitle">Get in touch.</p>
+
         <div class="contact-grid">
-          <div class="contact-info">
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-envelope"></i>
-              </div>
-              <div class="contact-details">
-                <h4>Email</h4>
-                <a href="mailto:patiencemamman98@gmail.com">patiencemamman98@gmail.com</a>
-              </div>
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
             </div>
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-phone"></i>
-              </div>
-              <div class="contact-details">
-                <h4>Phone</h4>
-                <p>+234 8163855886</p>
-              </div>
+            <h4>Location:</h4>
+            <p>Lagos, Nigeria</p>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
             </div>
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-map-marker-alt"></i>
-              </div>
-              <div class="contact-details">
-                <h4>Location</h4>
-                <p>Lagos, Nigeria</p>
-              </div>
+            <h4>Email:</h4>
+            <p><a href="mailto:patiencemamman98@gmail.com">patiencemamman98@gmail.com</a></p>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
             </div>
+            <h4>Call:</h4>
+            <p>+234 8163855886</p>
           </div>
         </div>
       </div>
@@ -358,115 +405,123 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-      <div class="container">
-        <p>&copy; <span id="year2"></span> Mamman Patience. All Rights Reserved.</p>
-      </div>
+      <p>&copy; <span id="year"></span> | All Rights Reserved.</p>
     </footer>
 
   </main>
 
-  <!-- Mobile Menu Toggle -->
-  <button class="mobile-toggle" id="mobileToggle">
-    <i class="fas fa-bars"></i>
-  </button>
-
   <script>
     // Update year
     document.getElementById('year').textContent = new Date().getFullYear();
-    document.getElementById('year2').textContent = new Date().getFullYear();
 
-    // Typing Animation
-    const texts = [
-      "Hi, I'm Mamman Patience",
-      "Data Analyst",
-      "Data Scientist",
-      "Machine Learning Enthusiast"
+    // Typing animation
+    const phrases = [
+      'An ML/AI Engineer',
+      'A Data Analyst',
+      'A Problem Solver'
     ];
-    let textIndex = 0;
-    let charIndex = 0;
+    let phraseIndex = 0;
+    let letterIndex = 0;
+    let currentPhrase = '';
     let isDeleting = false;
-    let typingSpeed = 100;
+    const typedTextSpan = document.querySelector('.typed-text');
+    const typingDelay = 100;
+    const erasingDelay = 50;
+    const newPhraseDelay = 2000;
 
-    function typeText() {
-      const currentText = texts[textIndex];
-      const typedTextElement = document.getElementById('typedText');
-
+    function type() {
       if (isDeleting) {
-        typedTextElement.textContent = currentText.substring(0, charIndex - 1);
-        charIndex--;
-        typingSpeed = 50;
+        currentPhrase = phrases[phraseIndex].substring(0, letterIndex - 1);
+        letterIndex--;
       } else {
-        typedTextElement.textContent = currentText.substring(0, charIndex + 1);
-        charIndex++;
-        typingSpeed = 100;
+        currentPhrase = phrases[phraseIndex].substring(0, letterIndex + 1);
+        letterIndex++;
       }
 
-      if (!isDeleting && charIndex === currentText.length) {
-        isDeleting = true;
-        typingSpeed = 2000; // Pause at end
-      } else if (isDeleting && charIndex === 0) {
+      typedTextSpan.textContent = currentPhrase;
+
+      if (!isDeleting && letterIndex === phrases[phraseIndex].length) {
+        setTimeout(() => isDeleting = true, newPhraseDelay);
+      } else if (isDeleting && letterIndex === 0) {
         isDeleting = false;
-        textIndex = (textIndex + 1) % texts.length;
-        typingSpeed = 500; // Pause before typing next
+        phraseIndex = (phraseIndex + 1) % phrases.length;
       }
 
-      setTimeout(typeText, typingSpeed);
+      const speed = isDeleting ? erasingDelay : typingDelay;
+      setTimeout(type, speed);
     }
 
-    // Start typing animation
-    typeText();
+    document.addEventListener('DOMContentLoaded', () => {
+      setTimeout(type, newPhraseDelay);
+    });
 
-    // Smooth scrolling
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
+    // Sidebar navigation
+    const menuToggle = document.getElementById('menuToggle');
+    const closeBtn = document.getElementById('closeBtn');
+    const sidebar = document.getElementById('sidebar');
+    const navItems = document.querySelectorAll('.nav-item');
+
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.add('active');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      sidebar.classList.remove('active');
+    });
+
+    // Smooth scrolling and active states
+    navItems.forEach(item => {
+      item.addEventListener('click', (e) => {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          
-          // Update active nav link
-          document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
-          this.classList.add('active');
-          
-          // Close mobile menu
-          document.querySelector('.sidebar').classList.remove('active');
-        }
+        const targetId = item.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        
+        navItems.forEach(nav => nav.classList.remove('active'));
+        item.classList.add('active');
+        
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+        sidebar.classList.remove('active');
       });
     });
 
-    // Mobile menu toggle
-    const mobileToggle = document.getElementById('mobileToggle');
-    const sidebar = document.querySelector('.sidebar');
-    
-    mobileToggle.addEventListener('click', () => {
-      sidebar.classList.toggle('active');
-    });
+    // Animate skills on scroll
+    const observerOptions = {
+      threshold: 0.5
+    };
 
-    // Close sidebar when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!sidebar.contains(e.target) && !mobileToggle.contains(e.target)) {
-        sidebar.classList.remove('active');
-      }
-    });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const skillFills = entry.target.querySelectorAll('.skill-fill');
+          skillFills.forEach(fill => {
+            fill.style.width = fill.getAttribute('data-width');
+          });
+        }
+      });
+    }, observerOptions);
 
-    // Highlight active section on scroll
-    const sections = document.querySelectorAll('.section');
-    const navLinks = document.querySelectorAll('.nav-link');
+    const skillsSection = document.querySelector('.skills-container');
+    if (skillsSection) {
+      observer.observe(skillsSection);
+    }
 
+    // Active section highlighting on scroll
     window.addEventListener('scroll', () => {
-      let current = '';
+      const sections = document.querySelectorAll('.section');
+      const scrollPos = window.scrollY + 200;
+
       sections.forEach(section => {
         const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (scrollY >= (sectionTop - 200)) {
-          current = section.getAttribute('id');
-        }
-      });
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute('id');
 
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-          link.classList.add('active');
+        if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+          navItems.forEach(item => {
+            item.classList.remove('active');
+            if (item.getAttribute('href') === `#${sectionId}`) {
+              item.classList.add('active');
+            }
+          });
         }
       });
     });
