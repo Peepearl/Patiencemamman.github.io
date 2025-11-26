@@ -13,8 +13,23 @@
   <!-- SIDEBAR -->
   <aside class="sidebar">
     <div class="sidebar-content">
+      <!-- SOCIAL LINKS AT TOP -->
+      <div class="sidebar-social">
+        <div class="social-links">
+          <a href="https://github.com/Peepearl" target="_blank" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/mamman-patience-792644189" target="_blank" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://x.com/prettylarmmy" target="_blank" title="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
+      </div>
+
       <div class="profile-section">
-        <img src="assets/profile.jpg" alt="Mamman Patience" class="sidebar-img">
+        <img src="asset/profile.jpg" alt="Mamman Patience" class="sidebar-img">
         <h2 class="sidebar-name">Mamman Patience</h2>
         <p class="sidebar-role">Data Analyst & ML Enthusiast</p>
       </div>
@@ -36,7 +51,7 @@
           <i class="fas fa-code"></i>
           <span>Projects</span>
         </a>
-        <a href="#resume" class="nav-link">
+        <a href="#resume.pdf" class="nav-link">
           <i class="fas fa-file-alt"></i>
           <span>Resume</span>
         </a>
@@ -47,11 +62,7 @@
       </nav>
 
       <div class="sidebar-footer">
-        <div class="social-links">
-          <a href="https://github.com/Peepearl" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/mamman-patience-792644189" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="https://x.com/prettylarmmy" target="_blank"><i class="fab fa-twitter"></i></a>
-        </div>
+        <p class="copyright">&copy; <span id="year"></span> Mamman Patience</p>
       </div>
     </div>
   </aside>
@@ -62,12 +73,25 @@
     <!-- HOME SECTION -->
     <section id="home" class="section home-section">
       <div class="container">
-        <h1 class="hero-title">Hi, I'm <span class="accent">Mamman Patience</span></h1>
-        <h2 class="hero-subtitle">Data Analyst • Data Scientist • Machine Learning Enthusiast</h2>
-        <p class="hero-text">I build data-driven solutions and AI applications to solve real-world problems.</p>
-        <div class="hero-buttons">
-          <a href="#contact" class="btn btn-primary">Get in Touch</a>
-          <a href="resume.pdf" class="btn btn-outline" download>Download CV</a>
+        <div class="home-grid">
+          <div class="home-text">
+            <h1 class="typing-container">
+              <span id="typedText"></span>
+              <span class="cursor">|</span>
+            </h1>
+            <h2 class="hero-subtitle">Data Analyst • Data Scientist • Machine Learning Enthusiast</h2>
+            <p class="hero-text">I build data-driven solutions and AI applications to solve real-world problems.</p>
+            <div class="hero-buttons">
+              <a href="#contact" class="btn btn-primary">Get in Touch</a>
+              <a href="asset/resume.pdf" class="btn btn-outline" download>Download CV</a>
+            </div>
+          </div>
+          <div class="home-image">
+            <div class="image-wrapper">
+              <img src="asset/profile.jpg" alt="Mamman Patience" class="home-profile-img">
+              <div class="image-border"></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -265,14 +289,14 @@
             <div class="resume-item">
               <h4>BSc Microbiology</h4>
               <p class="resume-institution">Kwara State University</p>
-              <p class="resume-date">2017 - 2021</p>
+              <p class="resume-date">2015 - 2019</p>
             </div>
           </div>
 
           <div class="resume-column">
             <h3 class="resume-heading"><i class="fas fa-briefcase"></i> Experience</h3>
             <div class="resume-item">
-              <h4>Data Analyst </h4>
+              <h4>Data Analyst Intern</h4>
               <p class="resume-institution">Company Name</p>
               <p class="resume-date">2023 - Present</p>
               <ul class="resume-list">
@@ -285,7 +309,7 @@
         </div>
 
         <div class="resume-download">
-          <a href="resume.pdf" class="btn btn-primary" download>
+          <a href="asset/resume.pdf" class="btn btn-primary" download>
             <i class="fas fa-download"></i> Download Full Resume
           </a>
         </div>
@@ -335,7 +359,7 @@
     <!-- FOOTER -->
     <footer class="footer">
       <div class="container">
-        <p>&copy; <span id="year"></span> Mamman Patience. All Rights Reserved.</p>
+        <p>&copy; <span id="year2"></span> Mamman Patience. All Rights Reserved.</p>
       </div>
     </footer>
 
@@ -349,6 +373,48 @@
   <script>
     // Update year
     document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('year2').textContent = new Date().getFullYear();
+
+    // Typing Animation
+    const texts = [
+      "Hi, I'm Mamman Patience",
+      "Data Analyst",
+      "Data Scientist",
+      "Machine Learning Enthusiast"
+    ];
+    let textIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typingSpeed = 100;
+
+    function typeText() {
+      const currentText = texts[textIndex];
+      const typedTextElement = document.getElementById('typedText');
+
+      if (isDeleting) {
+        typedTextElement.textContent = currentText.substring(0, charIndex - 1);
+        charIndex--;
+        typingSpeed = 50;
+      } else {
+        typedTextElement.textContent = currentText.substring(0, charIndex + 1);
+        charIndex++;
+        typingSpeed = 100;
+      }
+
+      if (!isDeleting && charIndex === currentText.length) {
+        isDeleting = true;
+        typingSpeed = 2000; // Pause at end
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        textIndex = (textIndex + 1) % texts.length;
+        typingSpeed = 500; // Pause before typing next
+      }
+
+      setTimeout(typeText, typingSpeed);
+    }
+
+    // Start typing animation
+    typeText();
 
     // Smooth scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
